@@ -16,9 +16,7 @@
         <span v-if="dropdownOptions.showDialCodeInSelection" class="vti__country-code">
           +{{ activeCountry && activeCountry.dialCode }}
         </span>
-        <slot name="arrow-icon" :open="open">
-          <span class="vti__dropdown-arrow">{{ open ? "▲" : "▼" }}</span>
-        </slot>
+        <span class="vti__dropdown-arrow">{{ open ? "▲" : "▼" }}</span>
       </span>
       <ul ref="list" class="vti__dropdown-list" v-if="open" v-once :class="dropdownOpenDirection">
         <li
